@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Growth Engine Proposal — Clean Era × Fleire Castro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FFFFFF; --ink:#1A1A1A; --ink-2:#3A3A3A; --ink-3:#5A5A5A; --ink-4:#8A8A8A;
+    --blue:#359BD3; --navy:#294E83; --navy-d:#071536; --green:#5E8A2E; --green-t:#EEF4E3;
+    --rule:#ECEAE4; --rule-2:#E0DDD6;
+    --sans:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;
+    --serif:'Instrument Serif',serif; --mono:'Space Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink-2);font-family:var(--sans);line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  h1,h2,h3,h4{color:var(--ink)}
+  .wrap{max-width:840px;margin:0 auto;padding:0 30px 50px}
+  .mono{font-family:var(--mono)} .serif{font-family:var(--serif)}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap;gap:8px}
+  .cob{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-3)} .cob b{color:var(--ink)}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+  .head{padding:34px 0 6px}
+  .head .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .head h1{font-family:var(--serif);font-weight:400;font-size:46px;line-height:1.02;letter-spacing:-.01em}
+  .head h1 em{font-style:italic;color:var(--blue)}
+  .head .lede{font-size:16.5px;color:var(--ink-3);max-width:62ch;margin-top:14px}
+  section{padding:30px 0;border-top:1px solid var(--rule);margin-top:24px}
+  .sec-eye{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  h2.st{font-family:var(--serif);font-weight:400;font-size:29px;line-height:1.1;margin-bottom:6px}
+  .sub{font-size:14.5px;color:var(--ink-3);max-width:64ch}
+  p{margin-bottom:12px} p b{color:var(--ink)}
+  .fill{background:#FFF7E8;border:1px dashed #E0B24D;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:12.5px;color:#9a6b12}
+
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .wc{border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+  .wc h4{font-size:15px;margin-bottom:5px;display:flex;gap:8px;align-items:center}
+  .wc h4 .d{width:9px;height:9px;border-radius:50%;background:var(--green)}
+  .wc p{font-size:13.5px;color:var(--ink-3);margin:0}
+
+  .phase{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--rule)}
+  .phase:last-child{border-bottom:0}
+  .phase .k{font-family:var(--mono);font-size:12px;color:var(--blue);font-weight:700}
+  .phase .k span{display:block;color:var(--ink-4);font-weight:400;margin-top:3px;font-size:11px}
+  .phase h4{font-size:16px;margin-bottom:5px} .phase ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-3)}
+  .phase li{margin-bottom:3px}
+
+  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  .pc{border:1px solid var(--rule);border-radius:16px;padding:24px;background:#fff}
+  .pc.feat{border:1.5px solid var(--blue);box-shadow:0 8px 30px rgba(53,155,211,.10)}
+  .pc .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  .pc .amt{font-family:var(--serif);font-size:40px;color:var(--navy-d);line-height:1}
+  .pc .amt small{font-size:16px;color:var(--ink-4);font-family:var(--sans)}
+  .pc .desc{font-size:13.5px;color:var(--ink-3);margin-top:8px}
+  .pc ul{list-style:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--rule)}
+  .pc li{font-size:13px;color:var(--ink-2);padding-left:20px;position:relative;margin-bottom:6px}
+  .pc li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+  .kicker{background:var(--green-t);border:1px solid #D8E5C2;border-radius:14px;padding:16px 20px;margin-top:16px;font-size:14px;color:var(--ink-2)}
+  .kicker b{color:var(--ink)}
+
+  .compare{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:16px}
+  .compare th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-4);padding:8px 12px;border-bottom:1px solid var(--rule-2)}
+  .compare td{padding:9px 12px;border-bottom:1px solid var(--rule);color:var(--ink-3)}
+  .compare tr.win td{background:#f2f8fc} .compare tr.win td b{color:var(--blue)}
+
+  .proof{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .proof .p{border:1px solid var(--rule-2);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--ink-2)}
+  .proof .p b{color:var(--navy)}
+  .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-4);line-height:1.9}
+  @media print{@page{size:letter;margin:.5in}section,.pc,.phase{break-inside:avoid}}
+  @media(max-width:720px){.why,.pricing{grid-template-columns:1fr}.phase{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="cob"><b>FLEIRE CASTRO</b> · Fractional Head of Growth &nbsp;×&nbsp; <b>Clean Era</b> (Mississauga / GTA)</div>
+    <div class="tag">Growth Engine Proposal · Draft</div>
+  </div>
+
+  <div class="head">
+    <div class="eyebrow">A growth engine, not a hire</div>
+    <h1>Clean Era's commercial client engine — <em>built and run for you.</em></h1>
+    <p class="lede">You don't need to hire, manage, and wait months for someone to build your marketing. I've already built this exact engine for local service businesses — and I run it with AI systems, so you get a full growth team's output from one operator. Foundation live in days, not quarters.</p>
+  </div>
+
+  <section>
+    <div class="sec-eye">01 · The goal</div>
+    <h2 class="st">Predictable walkthrough bookings from GTA facility managers.</h2>
+    <p class="sub">Your target: <span class="fill">confirm on call — e.g. X booked site-visits / Y commercial contracts in 90 days</span>. We build a repeatable engine that turns local search + targeted outreach into booked walkthroughs, then optimizes it every week. Your differentiators — photo-verified reports, bonded &amp; insured teams, transparent pricing, "On Time, On Spec, Every Time" — become the trust assets that convert.</p>
+  </section>
+
+  <section>
+    <div class="sec-eye">02 · Why me</div>
+    <h2 class="st">I've built this machine before — for businesses exactly like yours.</h2>
+    <div class="why">
+      <div class="wc"><h4><span class="d"></span>The engine already exists</h4><p>GeoLocally — my productized system for local service businesses: location + service landing pages, local SEO, and AI-search visibility. Live in 3–5 days. I point it at Clean Era + the GTA.</p></div>
+      <div class="wc"><h4><span class="d"></span>One operator + AI = team output</h4><p>"The Marketing Engineer" — I run what used to take a 30-person department, with AI systems. You get senior strategy and hands-on execution, no headcount.</p></div>
+      <div class="wc"><h4><span class="d"></span>18 years, senior credibility</h4><p>Campaign Asia Top 40 Under 40, Stevie Awards winner, U.S. State Department Professional Fellow. Founder of DashoContent and Third Team Ventures.</p></div>
+      <div class="wc"><h4><span class="d"></span>Philippines-based, built for remote</h4><p>Exactly the setup you're hiring for — remote, autonomous, accountable, with weekly reporting and a direct line to me.</p></div>
+    </div>
+    <div class="proof">
+      <div class="p"><b>Sample built for you →</b> office-cleaning-mississauga (see demo)</div>
+      <div class="p"><b>GeoLocally</b> — geolocally.com</div>
+      <div class="p"><b>The Marketing Engineer</b> — live AI content op</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eye">03 · The build</div>
+    <h2 class="st">The 90-day engine — in the right order.</h2>
+    <p class="sub">Foundation first, then leads, then scale. Everything below is built and run by me with AI systems.</p>
+    <div style="margin-top:18px">
+      <div class="phase"><div class="k">Weeks 1–4<span>Foundation</span></div><div><h4>The conversion + visibility base</h4><ul>
+        <li>Conversion-optimized <b>service + location landing pages</b> (Office / Medical / Industrial cleaning × Mississauga, Brampton, Oakville, Etobicoke…)</li>
+        <li>Google Business Profile optimization + review system · tracking &amp; analytics installed</li>
+        <li>Booking &amp; quote-request flow, "Free Deep Clean" offer wired in</li>
+      </ul></div></div>
+      <div class="phase"><div class="k">Weeks 3–7<span>Leads</span></div><div><h4>Inbound + outbound engine</h4><ul>
+        <li>Local SEO + <b>AI-search visibility (AEO/GEO)</b> so Clean Era shows up in Google <b>and</b> AI answers</li>
+        <li>Targeted outbound to facility &amp; property managers — AI-personalized email + LinkedIn sequences</li>
+        <li>1–2 SEO articles/week + weekly GBP posts, produced with AI in minutes</li>
+      </ul></div></div>
+      <div class="phase"><div class="k">Weeks 6–12<span>Convert &amp; scale</span></div><div><h4>Automation, proof &amp; paid</h4><ul>
+        <li>Speed-to-lead automation: instant SMS/email, follow-up &amp; nurture sequences</li>
+        <li>Facility-Manager Proof Pack (photo-verified reports, guarantee) as the conversion asset</li>
+        <li>Controlled paid tests when the base is strong (Google LSA/Search + Meta retargeting)</li>
+        <li>KPI dashboard + weekly reporting</li>
+      </ul></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-eye">04 · Investment</div>
+    <h2 class="st">One engine. Priced against what it replaces.</h2>
+    <table class="compare">
+      <tr><th>Your alternative</th><th>Cost</th><th>What you get</th></tr>
+      <tr><td>Full-time senior growth hire</td><td>$4–6k/mo + you manage + ramp</td><td>one person, manual capacity, months to build</td></tr>
+      <tr><td>Full-service growth agency</td><td>$6–12k/mo</td><td>junior account managers, generic, slow</td></tr>
+      <tr class="win"><td><b>This engine</b></td><td><b>see below</b></td><td><b>founder strategy + execution + AI, live in days</b></td></tr>
+    </table>
+    <div class="pricing">
+      <div class="pc"><div class="lbl">One-time</div><div class="amt">$3,500</div><div class="desc">Growth Engine Build — the first 30 days. Everything in the Foundation phase, live.</div>
+        <ul><li>Service + location landing pages</li><li>GBP + tracking + booking flow</li><li>Outreach + automation setup</li></ul>
+      </div>
+      <div class="pc feat"><div class="lbl">Monthly · after build</div><div class="amt">$4,000<small>/mo</small></div><div class="desc">Run &amp; optimize — the engine working every week.</div>
+        <ul><li>Inbound + outbound lead gen</li><li>Content, local SEO, AI-visibility</li><li>Automation, paid, weekly reporting</li></ul>
+      </div>
+    </div>
+    <div class="kicker"><b>Performance option:</b> prefer a leaner base? <b>$3,500/mo + a bonus per booked walkthrough</b> (or per contract closed). You pay more only when I put revenue on the board — fully aligned with your KPIs. &nbsp; <span style="color:var(--ink-4)">Ad spend is separate from this fee. 50% deposit holds the start.</span></div>
+  </section>
+
+  <section>
+    <div class="sec-eye">05 · Next step</div>
+    <h2 class="st">Start the build this week.</h2>
+    <p class="sub">On approval: 50% deposit holds the start, quick kickoff to confirm priorities, and the foundation goes live inside the first weeks — well before you'd have finished interviewing candidates for the role.</p>
+  </section>
+
+  <div class="foot">
+    FLEIRE CASTRO · FRACTIONAL HEAD OF GROWTH · fleire@thirdteam.org · thirdteam.org<br>
+    PREPARED FOR CLEAN ERA (DEBRAND MEDIA INC.) · MISSISSAUGA / GTA · JULY 2026 · DRAFT FOR DISCUSSION
+  </div>
+
+</div>
+</body>
+</html>
