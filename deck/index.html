@@ -145,6 +145,21 @@
   .kpi .n{font-family:var(--head);font-weight:800;font-size:37px;color:var(--blue);line-height:1;letter-spacing:-.01em}
   .kpi .l{font-size:12.5px;color:var(--ink-2);margin-top:9px;line-height:1.35}
 
+
+  /* roadmap timeline */
+  .road{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px;flex:1}
+  .rc{border:1px solid var(--line);border-radius:14px;padding:14px 15px 16px;background:#fff;display:flex;flex-direction:column}
+  .rc.feat{border:2px solid var(--blue);box-shadow:0 10px 26px rgba(53,155,211,.12)}
+  .rm{font-family:var(--mono);font-size:10.5px;color:var(--blue);font-weight:700;letter-spacing:.05em}
+  .barbox{height:96px;display:flex;align-items:flex-end;margin:10px 0 8px}
+  .bar{width:100%;background:linear-gradient(180deg,var(--blue-l),var(--blue));border-radius:7px 7px 0 0}
+  .bar.gray{background:linear-gradient(180deg,#c7d3df,#9fb0c1)}
+  .rfee{font-family:var(--head);font-size:14px;color:var(--ink-2);line-height:1.1}
+  .rfee b{font-size:23px;color:var(--navy-d)} .rfee small{font-size:12px;color:var(--ink-3)}
+  .rt{font-family:var(--head);font-weight:800;font-size:15px;color:var(--navy-d);margin-top:8px}
+  .rd{font-size:11.5px;color:var(--ink-2);margin-top:5px;line-height:1.32;flex:1}
+  .rteam{font-size:10px;color:var(--blue);margin-top:8px;font-weight:600}
+
   @media print{
     @page{size:1280px 720px;margin:0}
     body{background:#fff}
@@ -153,7 +168,7 @@
     .deck{max-width:none}
     .gaps{grid-template-columns:1fr 1fr}.proofgrid{grid-template-columns:repeat(3,1fr)}
     .phases{grid-template-columns:repeat(3,1fr)}.weeks{grid-template-columns:repeat(4,1fr)}
-    .obgrid{grid-template-columns:repeat(4,1fr)}.kpigrid{grid-template-columns:repeat(4,1fr)}.price,.twocol,.split{grid-template-columns:1fr 1fr}
+    .obgrid{grid-template-columns:repeat(4,1fr)}.kpigrid{grid-template-columns:repeat(4,1fr)}.road{grid-template-columns:repeat(5,1fr)}.price,.twocol,.split{grid-template-columns:1fr 1fr}
   }
   @media screen and (max-width:820px){
     .slide{aspect-ratio:auto;min-height:auto;padding:34px 24px}
@@ -179,7 +194,7 @@
 
   <!-- 2 DIAGNOSIS -->
   <section class="slide">
-    <span class="snum">02 / 13</span>
+    <span class="snum">02 / 14</span>
     <div class="kick">The diagnosis</div>
     <h2>Four leaks are <span class="b">costing you commercial leads</span> right now.</h2>
     <div class="gaps">
@@ -192,7 +207,7 @@
 
   <!-- 3 THE GOAL -->
   <section class="slide">
-    <span class="snum">03 / 13</span>
+    <span class="snum">03 / 14</span>
     <div class="split">
       <div>
         <div class="kick">The goal</div>
@@ -209,7 +224,7 @@
 
   <!-- 4 WHY ME -->
   <section class="slide">
-    <span class="snum">04 / 13</span>
+    <span class="snum">04 / 14</span>
     <div class="split rev">
       <div class="hero-img"><img src="cleaning.jpg" alt="Professional commercial cleaning"></div>
       <div>
@@ -227,7 +242,7 @@
 
   <!-- 5 PROOF: REAL WORK -->
   <section class="slide">
-    <span class="snum">05 / 13</span>
+    <span class="snum">05 / 14</span>
     <div class="kick">Proof · real, live work</div>
     <h2>Businesses I've built &amp; grown — <span class="b">all live, all checkable.</span></h2>
     <div class="proofgrid">
@@ -243,7 +258,7 @@
 
   <!-- 5b PROOF: KPI WINS -->
   <section class="slide">
-    <span class="snum">06 / 13</span>
+    <span class="snum">06 / 14</span>
     <div class="kick">Proof · the numbers</div>
     <h2>KPI wins I've put on the board — <span class="b">across those businesses.</span></h2>
     <div class="kpigrid">
@@ -261,7 +276,7 @@
 
   <!-- 6 PROOF: AUTOMATIONS -->
   <section class="slide">
-    <span class="snum">07 / 13</span>
+    <span class="snum">07 / 14</span>
     <div class="kick">Proof · the automation fleet</div>
     <h2>130+ automations I've built &amp; run — <span class="b">these are the real machines.</span></h2>
     <div class="proofgrid">
@@ -274,7 +289,7 @@
 
   <!-- 7 THE BUILD -->
   <section class="slide">
-    <span class="snum">08 / 13</span>
+    <span class="snum">08 / 14</span>
     <div class="kick">The 90-day build</div>
     <h2>The engine — <span class="b">built in the right order.</span></h2>
     <div class="phases">
@@ -286,7 +301,7 @@
 
   <!-- 8 FIRST 30 DAYS -->
   <section class="slide">
-    <span class="snum">09 / 13</span>
+    <span class="snum">09 / 14</span>
     <div class="kick">Your first 30 days</div>
     <h2>Week by week — <span class="b">a live engine, not a deck.</span></h2>
     <div class="weeks">
@@ -299,7 +314,7 @@
 
   <!-- 9 ONBOARDING -->
   <section class="slide">
-    <span class="snum">10 / 13</span>
+    <span class="snum">10 / 14</span>
     <div class="kick">What I need from you</div>
     <h2>Onboarding — <span class="b">the fast-start checklist.</span></h2>
     <div class="obgrid">
@@ -313,7 +328,7 @@
 
   <!-- 10 INVESTMENT -->
   <section class="slide">
-    <span class="snum">11 / 13</span>
+    <span class="snum">11 / 14</span>
     <div class="kick">Investment · bite-size</div>
     <h2>Built in phases — <span class="b">scaled by results.</span></h2>
     <div class="price">
@@ -323,9 +338,60 @@
     <div class="kick-note"><b>Only grows when the numbers do.</b> Separate &amp; yours: ad spend (~$500–800/mo) + tool subs (GoHighLevel/Zoho/Lemlist). &nbsp;vs a $4–6k hire or $6–12k agency.</div>
   </section>
 
+
+  <!-- ROADMAP -->
+  <section class="slide">
+    <span class="snum">12 / 14</span>
+    <div class="kick">Your roadmap</div>
+    <h2>From quick wins to the <span class="b">full engine — phase by phase.</span></h2>
+    <div class="road">
+      <div class="rc">
+        <div class="rm">WEEKS 1–4</div>
+        <div class="barbox"><div class="bar gray" style="height:26px"></div></div>
+        <div class="rfee">Setup · <b>$3,500</b></div>
+        <div class="rt">Build the engine</div>
+        <div class="rd">Tracking · GBP · Google Local Ads live · GoHighLevel + AI receptionist</div>
+        <div class="rteam">🤖 You + AI build agents</div>
+      </div>
+      <div class="rc feat">
+        <div class="rm">MONTHS 1–2</div>
+        <div class="barbox"><div class="bar" style="height:44px"></div></div>
+        <div class="rfee"><b>$2,000</b><small>/mo</small></div>
+        <div class="rt">Ads &amp; cash</div>
+        <div class="rd">Local Ads + call-capture → fast leads that keep the team busy</div>
+        <div class="rteam">🤖 AI receptionist catching calls</div>
+      </div>
+      <div class="rc">
+        <div class="rm">MONTH 3</div>
+        <div class="barbox"><div class="bar" style="height:66px"></div></div>
+        <div class="rfee"><b>$3,000</b><small>/mo</small></div>
+        <div class="rt">Get found</div>
+        <div class="rd">+ Outbound to healthcare (Lemlist/Zoho) + local SEO/AEO pages</div>
+        <div class="rteam">🤖 AI outbound + content agents</div>
+      </div>
+      <div class="rc">
+        <div class="rm">MONTH 4+</div>
+        <div class="barbox"><div class="bar" style="height:88px"></div></div>
+        <div class="rfee"><b>$4,000</b><small>/mo</small></div>
+        <div class="rt">Full engine</div>
+        <div class="rd">+ Fractional-CMO layer + AI chief-of-staff + socials + retargeting</div>
+        <div class="rteam">👤 Fractional CMO + 🤖 full fleet</div>
+      </div>
+      <div class="rc">
+        <div class="rm">MONTH 6+</div>
+        <div class="barbox"><div class="bar" style="height:100px"></div></div>
+        <div class="rfee">Scale</div>
+        <div class="rt">Expand</div>
+        <div class="rd">Scale ad spend as ROI proves · AI-ops across the business</div>
+        <div class="rteam">🤖 AI-ops across the company</div>
+      </div>
+    </div>
+    <div class="kick-note"><b>You start small and step up only as each phase proves out</b> — full multi-channel engine, and your full $4K, by Month 4.</div>
+  </section>
+
   <!-- 11 HOW WE WORK + PROTECTION -->
   <section class="slide">
-    <span class="snum">12 / 13</span>
+    <span class="snum">13 / 14</span>
     <div class="kick">How we work · your protection</div>
     <h2>Senior operator, clear cadence, <span class="b">fully de-risked.</span></h2>
     <div class="twocol">
