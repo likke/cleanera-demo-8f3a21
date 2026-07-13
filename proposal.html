@@ -12,14 +12,15 @@
   :root{
     --paper:#FFFFFF; --ink:#1A1A1A; --ink-2:#3A3A3A; --ink-3:#5A5A5A; --ink-4:#8A8A8A;
     --blue:#359BD3; --navy:#294E83; --navy-d:#071536; --green:#5E8A2E; --green-t:#EEF4E3;
-    --rule:#ECEAE4; --rule-2:#E0DDD6;
+    --red:#C0492E; --red-t:#FBEDE9; --amber:#E0A53F;
+    --rule:#ECEAE4; --rule-2:#E0DDD6; --soft:#F7F9FB;
     --sans:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;
     --serif:'Instrument Serif',serif; --mono:'Space Mono',monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--paper);color:var(--ink-2);font-family:var(--sans);line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   h1,h2,h3,h4{color:var(--ink)}
-  .wrap{max-width:840px;margin:0 auto;padding:0 30px 50px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 30px 50px}
   .mono{font-family:var(--mono)} .serif{font-family:var(--serif)}
   .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap;gap:8px}
   .cob{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-3)} .cob b{color:var(--ink)}
@@ -28,13 +29,26 @@
   .head .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
   .head h1{font-family:var(--serif);font-weight:400;font-size:46px;line-height:1.02;letter-spacing:-.01em}
   .head h1 em{font-style:italic;color:var(--blue)}
-  .head .lede{font-size:16.5px;color:var(--ink-3);max-width:62ch;margin-top:14px}
-  section{padding:30px 0;border-top:1px solid var(--rule);margin-top:24px}
+  .head .lede{font-size:16.5px;color:var(--ink-3);max-width:64ch;margin-top:14px}
+  .toc{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:20px;font-family:var(--mono);font-size:11px;color:var(--ink-4);letter-spacing:.04em}
+  .toc a{color:var(--ink-3);text-decoration:none} .toc a:hover{color:var(--blue)}
+  section{padding:32px 0;border-top:1px solid var(--rule);margin-top:22px}
   .sec-eye{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
   h2.st{font-family:var(--serif);font-weight:400;font-size:29px;line-height:1.1;margin-bottom:6px}
-  .sub{font-size:14.5px;color:var(--ink-3);max-width:64ch}
+  .sub{font-size:14.5px;color:var(--ink-3);max-width:66ch}
   p{margin-bottom:12px} p b{color:var(--ink)}
   .fill{background:#FFF7E8;border:1px dashed #E0B24D;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:12.5px;color:#9a6b12}
+
+  /* diagnosis gap cards */
+  .gaps{display:grid;gap:12px;margin-top:20px}
+  .gap{border:1px solid var(--rule);border-left:3px solid var(--red);border-radius:12px;padding:16px 20px;background:#fff}
+  .gap h4{font-size:16px;margin-bottom:6px;display:flex;align-items:baseline;gap:9px}
+  .gap h4 .n{font-family:var(--mono);font-size:11px;color:var(--red);flex:none}
+  .gap .cost{font-size:13.5px;color:var(--ink-3);margin-bottom:6px}
+  .gap .cost b{color:var(--red)}
+  .gap .fix{font-size:13.5px;color:var(--ink-2);padding-top:8px;border-top:1px dashed var(--rule-2)}
+  .gap .fix b{color:var(--green)}
+  .verify{font-family:var(--mono);font-size:11px;color:var(--ink-4);margin-top:12px}
 
   .why{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
   .wc{border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
@@ -48,6 +62,7 @@
   .phase .k span{display:block;color:var(--ink-4);font-weight:400;margin-top:3px;font-size:11px}
   .phase h4{font-size:16px;margin-bottom:5px} .phase ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-3)}
   .phase li{margin-bottom:3px}
+  .phase .out{font-size:12.5px;color:var(--green);font-family:var(--mono);margin-top:7px}
 
   .pricing{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
   .pc{border:1px solid var(--rule);border-radius:16px;padding:24px;background:#fff}
@@ -67,12 +82,42 @@
   .compare td{padding:9px 12px;border-bottom:1px solid var(--rule);color:var(--ink-3)}
   .compare tr.win td{background:#f2f8fc} .compare tr.win td b{color:var(--blue)}
 
+  /* onboarding checklist */
+  .obgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  .obcard{border:1px solid var(--rule);border-radius:14px;padding:18px 20px;background:#fff}
+  .obcard h4{font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+  .obcard h4 .ic{width:26px;height:26px;border-radius:8px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+  .obcard .why{font-size:12px;color:var(--ink-4);margin:0 0 10px;display:block}
+  .obcard ul{list-style:none;margin:0}
+  .obcard li{font-size:13px;color:var(--ink-2);padding:5px 0 5px 20px;position:relative;border-bottom:1px solid var(--rule)}
+  .obcard li:last-child{border-bottom:0}
+  .obcard li:before{content:"☐";position:absolute;left:0;color:var(--blue)}
+  .obcard li b{color:var(--ink)}
+
+  /* cadence + protection */
+  .clist{list-style:none;margin-top:16px;display:grid;gap:10px}
+  .clist li{padding-left:26px;position:relative;font-size:14.5px;color:var(--ink-2)}
+  .clist li:before{content:"→";position:absolute;left:0;color:var(--blue);font-family:var(--mono)}
+  .clist li b{color:var(--ink)}
+  .shield{background:var(--green-t);border:1px solid #D8E5C2;border-radius:14px;padding:20px 22px;margin-top:8px}
+  .shield ul{list-style:none;display:grid;gap:9px}
+  .shield li{padding-left:24px;position:relative;font-size:14px;color:var(--ink-2)}
+  .shield li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+  .shield li b{color:var(--ink)}
+
+  /* timeline */
+  .timeline{display:grid;gap:0;margin-top:18px}
+  .tl{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .tl:last-child{border-bottom:0}
+  .tl .w{font-family:var(--mono);font-size:12px;color:var(--blue);font-weight:700}
+  .tl .b{font-size:14px;color:var(--ink-2)} .tl .b b{color:var(--ink)}
+
   .proof{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
   .proof .p{border:1px solid var(--rule-2);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--ink-2)}
   .proof .p b{color:var(--navy)}
   .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-4);line-height:1.9}
-  @media print{@page{size:letter;margin:.5in}section,.pc,.phase{break-inside:avoid}}
-  @media(max-width:720px){.why,.pricing{grid-template-columns:1fr}.phase{grid-template-columns:1fr}}
+  @media print{@page{size:letter;margin:.5in}section,.pc,.phase,.gap,.obcard,.tl{break-inside:avoid}}
+  @media(max-width:720px){.why,.pricing,.obgrid{grid-template-columns:1fr}.phase,.tl{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -80,23 +125,51 @@
 
   <div class="topbar">
     <div class="cob" style="display:flex;align-items:center;gap:12px"><b>FLEIRE CASTRO</b> · Fractional Head of Growth &nbsp;×&nbsp; <img src="cleanera-logo.png" alt="Clean Era" style="height:26px;width:auto;vertical-align:middle"></div>
-    <div class="tag">Growth Engine Proposal · Draft</div>
+    <div class="tag">Growth Engine Proposal</div>
   </div>
 
   <div class="head">
     <div class="eyebrow">A builder, not just a manager</div>
     <h1>Clean Era's commercial client engine — <em>built and run for you.</em></h1>
-    <p class="lede">Your brief asked for "a builder, not just a manager." That's exactly what I do — I build the marketing engine from the ground up and run it. I've built this exact machine for local service businesses, and I run it with AI systems connected to the tools you already own. A full growth team's output from one operator, live in days, not quarters.</p>
+    <p class="lede">Your brief asked for "a builder, not just a manager." That's exactly what I do — I build the marketing engine from the ground up and run it. This proposal walks through what I see in your current setup, the engine I'd build, exactly what your first 30 days look like, and what I'd need from you to start. Everything runs on the tools you already own, delivered by one operator with AI systems — a full growth team's output, live in days, not quarters.</p>
+    <div class="toc">
+      <a href="#dx">01 Diagnosis</a><a href="#goal">02 The goal</a><a href="#why">03 Why me</a><a href="#build">04 The 90-day build</a><a href="#days">05 Your first 30 days</a><a href="#need">06 What I need from you</a><a href="#invest">07 Investment</a><a href="#work">08 How we work</a><a href="#protect">09 Your protection</a><a href="#next">10 Next steps</a>
+    </div>
   </div>
 
-  <section>
-    <div class="sec-eye">01 · The goal</div>
+  <section id="dx">
+    <div class="sec-eye">01 · Diagnosis</div>
+    <h2 class="st">What I see costing you commercial leads right now.</h2>
+    <p class="sub">From a first look at your website, your tools, and the GTA market, here's where the leaks are. None of this is a criticism — it's exactly what a new startup looks like before the engine is built. It's also the fastest ROI.</p>
+    <div class="gaps">
+      <div class="gap"><h4><span class="n">GAP 1</span>Your homepage has no service or location pages.</h4>
+        <div class="cost">A facility manager searching "office cleaning Mississauga" or "medical cleaning GTA" lands on a generic homepage — not a page built for their search. <b>Your own marketing plan says it: traffic must go to keyword-specific landing pages, not the homepage.</b> Every un-built page is lost search traffic and lost paid-ad conversion.</div>
+        <div class="fix"><b>Fix:</b> dedicated, conversion-built pages per service × city (I already built you a sample — "Office Cleaning in Mississauga").</div>
+      </div>
+      <div class="gap"><h4><span class="n">GAP 2</span>You're invisible in AI search.</h4>
+        <div class="cost">Buyers now ask ChatGPT and Google's AI "who's a reliable commercial cleaner in Mississauga?" As a new brand, Clean Era almost certainly isn't being named. <b>Your competitors who get cited win the lead before you're even in the conversation.</b></div>
+        <div class="fix"><b>Fix:</b> AI-search visibility (AEO/GEO) — the exact system I've productized for local service businesses.</div>
+      </div>
+      <div class="gap"><h4><span class="n">GAP 3</span>You own great tools that aren't running.</h4>
+        <div class="cost">You already pay for GoHighLevel, Zoho CRM, and Lemlist — but there's no live outbound to facility managers, no instant speed-to-lead follow-up, and no automated nurture. <b>You're paying for the engine and driving it by hand.</b></div>
+        <div class="fix"><b>Fix:</b> I wire your existing stack into a running system — outbound in Lemlist, pipeline in Zoho, instant follow-up in GoHighLevel.</div>
+      </div>
+      <div class="gap"><h4><span class="n">GAP 4</span>Your best trust asset isn't doing sales work.</h4>
+        <div class="cost">Photo-verified reports, bonded &amp; insured teams, and a 100% guarantee are exactly what facility managers worry about — but they're buried, not packaged. <b>Trust that isn't shown doesn't convert.</b></div>
+        <div class="fix"><b>Fix:</b> a Facility-Manager Proof Pack that turns your guarantees into your #1 conversion asset on pages and in outreach.</div>
+      </div>
+    </div>
+    <div class="verify">On day 1 I also verify what I can't see from outside: whether tracking (GA4, Tag Manager, call tracking) is properly installed, your Google Business Profile status, and current lead sources — so we measure lift from a real baseline.</div>
+  </section>
+
+  <section id="goal">
+    <div class="sec-eye">02 · The goal</div>
     <h2 class="st">Predictable walkthrough bookings from GTA facility managers.</h2>
     <p class="sub">Your target: <span class="fill">confirm on call — e.g. X booked site-visits / Y commercial contracts in 90 days</span>. We build a repeatable engine that turns local search + targeted outreach into booked walkthroughs, then optimizes it every week. Your differentiators — photo-verified reports, bonded &amp; insured teams, transparent pricing, "On Time, On Spec, Every Time" — become the trust assets that convert.</p>
   </section>
 
-  <section>
-    <div class="sec-eye">02 · Why me</div>
+  <section id="why">
+    <div class="sec-eye">03 · Why me</div>
     <h2 class="st">I've built this machine before — for businesses exactly like yours.</h2>
     <div class="why">
       <div class="wc"><h4><span class="d"></span>The engine already exists</h4><p>GeoLocally — my productized system for local service businesses: location + service landing pages, local SEO, and AI-search visibility. Live in 3–5 days. I point it at Clean Era + the GTA.</p></div>
@@ -105,38 +178,98 @@
       <div class="wc"><h4><span class="d"></span>I connect to the stack you already own</h4><p>You already run GoHighLevel, Zoho CRM, and Lemlist — all three have full APIs. My systems plug straight in (a Private Integration Token on your GoHighLevel is all it takes). Nothing to rip out, nothing new to buy.</p></div>
     </div>
     <div class="proof">
-      <div class="p"><b>Sample built for you →</b> office-cleaning-mississauga (see demo)</div>
+      <div class="p"><b>Sample built for you →</b> office-cleaning-mississauga (in the demo hub)</div>
       <div class="p"><b>GeoLocally</b> — geolocally.com</div>
       <div class="p"><b>The Marketing Engineer</b> — live AI content op</div>
     </div>
   </section>
 
-  <section>
-    <div class="sec-eye">03 · The build</div>
-    <h2 class="st">The 90-day engine — in the right order.</h2>
-    <p class="sub">Foundation first, then leads, then scale. Everything below is built and run by me with AI systems.</p>
+  <section id="build">
+    <div class="sec-eye">04 · The 90-day build</div>
+    <h2 class="st">The engine — built in the right order.</h2>
+    <p class="sub">Foundation first, then leads, then scale. Skipping the order is why most cleaning-company marketing fails. Everything below is built and run by me with AI systems.</p>
     <div style="margin-top:18px">
       <div class="phase"><div class="k">Weeks 1–4<span>Foundation</span></div><div><h4>The conversion + visibility base</h4><ul>
-        <li>Conversion-optimized <b>service + location landing pages</b> (Office / Medical / Industrial cleaning × Mississauga, Brampton, Oakville, Etobicoke…)</li>
-        <li>Google Business Profile optimization + review system · tracking &amp; analytics installed</li>
-        <li>Booking &amp; quote flow + "Free Deep Clean" offer wired into <b>your existing GoHighLevel</b> (via API)</li>
-      </ul></div></div>
+        <li>Conversion-optimized <b>service + location landing pages</b> (Office / Medical / Industrial × Mississauga, Brampton, Oakville, Etobicoke…)</li>
+        <li>Google Business Profile optimization + review system · tracking &amp; analytics verified/installed</li>
+        <li>Booking &amp; quote flow + "Free Deep Clean" offer wired into <b>your GoHighLevel</b></li>
+      </ul><div class="out">▸ Outcome: a professional, findable presence that converts.</div></div></div>
       <div class="phase"><div class="k">Weeks 3–7<span>Leads</span></div><div><h4>Inbound + outbound engine</h4><ul>
         <li>Local SEO + <b>AI-search visibility (AEO/GEO)</b> so Clean Era shows up in Google <b>and</b> AI answers</li>
         <li>Targeted outbound to facility &amp; property managers — AI-personalized sequences through <b>your Lemlist + Zoho</b></li>
         <li>1–2 SEO articles/week + weekly GBP posts, produced with AI in minutes</li>
-      </ul></div></div>
+      </ul><div class="out">▸ Outcome: first consistent lead flow from multiple sources.</div></div></div>
       <div class="phase"><div class="k">Weeks 6–12<span>Convert &amp; scale</span></div><div><h4>Automation, proof &amp; paid</h4><ul>
-        <li>Speed-to-lead automation in <b>GoHighLevel</b>: instant SMS/email, follow-up &amp; nurture sequences</li>
+        <li>Speed-to-lead automation in <b>GoHighLevel</b>: instant SMS/email, follow-up &amp; nurture</li>
         <li>Facility-Manager Proof Pack (photo-verified reports, guarantee) as the conversion asset</li>
-        <li>Controlled paid tests when the base is strong (Google LSA/Search + Meta retargeting)</li>
+        <li>Controlled paid tests once the base is strong (Google LSA/Search + Meta retargeting)</li>
         <li>KPI dashboard + weekly reporting</li>
-      </ul></div></div>
+      </ul><div class="out">▸ Outcome: a predictable, optimizing booking machine.</div></div></div>
     </div>
   </section>
 
-  <section>
-    <div class="sec-eye">04 · Investment</div>
+  <section id="days">
+    <div class="sec-eye">05 · Your first 30 days</div>
+    <h2 class="st">Week by week — what actually happens.</h2>
+    <p class="sub">This is the Growth Engine Build. By day 30 you have a live, running engine — not a plan, not a deck. Here's the week-by-week.</p>
+    <div class="timeline">
+      <div class="tl"><div class="w">Week 1<br><span style="color:var(--ink-4);font-weight:400">Access &amp; audit</span></div><div class="b"><b>Connect &amp; diagnose.</b> Get access to your tools (below), connect my systems to your GoHighLevel / Zoho / Lemlist, verify or install tracking (GA4, Tag Manager, call tracking), run a full audit, start Google Business Profile optimization, and assemble your brand kit. You get a short baseline report: where you are today.</div></div>
+      <div class="tl"><div class="w">Week 2<br><span style="color:var(--ink-4);font-weight:400">Foundation pages</span></div><div class="b"><b>Build the pages that convert.</b> Your priority service + location landing pages go live (starting with Office Cleaning Mississauga), with the "Free Deep Clean" offer and the booking / quote flow wired into GoHighLevel. This is where search traffic and ads finally have somewhere to land.</div></div>
+      <div class="tl"><div class="w">Week 3<br><span style="color:var(--ink-4);font-weight:400">Convert &amp; reach out</span></div><div class="b"><b>Turn on the follow-up + outbound.</b> Speed-to-lead automation in GoHighLevel (instant SMS/email the moment a lead comes in), the Facility-Manager Proof Pack built, and the first outbound campaign to facility &amp; property managers launched through your Lemlist, tracked in Zoho.</div></div>
+      <div class="tl"><div class="w">Week 4<br><span style="color:var(--ink-4);font-weight:400">Visibility &amp; report</span></div><div class="b"><b>Get found, and measure.</b> Local SEO + AI-search visibility live, first content published, and your KPI dashboard goes live. We close the 30 days with a review: what's built, what it's producing, and the plan for the ongoing run.</div></div>
+    </div>
+    <div class="kicker" style="background:var(--soft);border-color:var(--rule-2)"><b>By day 30 you have:</b> live location pages · GoHighLevel automations running · outbound to facility managers in motion · AI-search visibility started · a reporting dashboard · and your first leads moving through the pipeline.</div>
+  </section>
+
+  <section id="need">
+    <div class="sec-eye">06 · What I need from you</div>
+    <h2 class="st">Onboarding — the fast start checklist.</h2>
+    <p class="sub">The build moves as fast as access does. Here's everything I'd need in week 1. Most of it is granting access to accounts you already have — none of it costs extra (the APIs are included in your existing plans).</p>
+    <div class="obgrid">
+      <div class="obcard"><h4><span class="ic">🔑</span>Access to your tools</h4><span class="why">So my systems can run inside what you already own.</span>
+        <ul>
+          <li><b>GoHighLevel</b> — a Private Integration Token (or admin seat)</li>
+          <li><b>Zoho CRM</b> — API access / a user seat</li>
+          <li><b>Lemlist</b> — API key / team seat</li>
+          <li><b>Google</b> — Business Profile, Google Ads, Analytics (GA4), Search Console, Tag Manager</li>
+          <li><b>Meta</b> — Business Manager / ad account + Page admin</li>
+          <li><b>LinkedIn</b> — Company Page admin (+ ad account if used)</li>
+          <li><b>Website + domain</b> — CMS/hosting admin + DNS access (for pages, tracking, email auth)</li>
+        </ul>
+      </div>
+      <div class="obcard"><h4><span class="ic">🎨</span>Brand &amp; content assets</h4><span class="why">So everything looks like you — not like stock.</span>
+        <ul>
+          <li><b>Logo files</b>, brand colors, fonts</li>
+          <li><b>Real photos</b> — before/after, team, facilities, equipment</li>
+          <li><b>Reviews &amp; testimonials</b> you already have</li>
+          <li><b>Insurance / bonding certs</b> + any certifications</li>
+          <li><b>Service list</b> + packages + pricing guidance</li>
+          <li><b>Your current offer</b> details &amp; any constraints</li>
+        </ul>
+      </div>
+      <div class="obcard"><h4><span class="ic">🎯</span>Business inputs</h4><span class="why">So we target the right buyers and measure real lift.</span>
+        <ul>
+          <li><b>Priority customers</b> — which facility types come first (offices, medical, industrial…)</li>
+          <li><b>Service areas</b> — priority cities in the GTA</li>
+          <li><b>Sales process</b> — who handles leads, response time, booking calendar</li>
+          <li><b>Baseline</b> — current lead sources &amp; rough monthly numbers</li>
+          <li><b>Targets</b> — bookings / contracts / revenue goals</li>
+        </ul>
+      </div>
+      <div class="obcard"><h4><span class="ic">👥</span>People &amp; comms</h4><span class="why">So nothing stalls waiting on an answer.</span>
+        <ul>
+          <li><b>Main point of contact</b> + decision-maker</li>
+          <li><b>Who answers leads</b> and does walkthroughs</li>
+          <li><b>Preferred channel</b> (email / Slack / WhatsApp)</li>
+          <li><b>A weekly 30-min check-in</b> slot</li>
+        </ul>
+      </div>
+    </div>
+    <div class="kicker"><b>The one thing that matters most:</b> that you're comfortable with AI systems and automation doing the heavy lifting inside your tools. That's what lets one person out-produce an agency — and it's how I work.</div>
+  </section>
+
+  <section id="invest">
+    <div class="sec-eye">07 · Investment</div>
     <h2 class="st">One engine. Priced against what it replaces.</h2>
     <table class="compare">
       <tr><th>Your alternative</th><th>Cost</th><th>What you get</th></tr>
@@ -145,25 +278,55 @@
       <tr class="win"><td><b>This engine</b></td><td><b>see below</b></td><td><b>founder strategy + execution + AI, live in days</b></td></tr>
     </table>
     <div class="pricing">
-      <div class="pc"><div class="lbl">One-time</div><div class="amt">$3,500</div><div class="desc">Growth Engine Build — the first 30 days. Everything in the Foundation phase, live.</div>
+      <div class="pc"><div class="lbl">One-time</div><div class="amt">$3,500</div><div class="desc">Growth Engine Build — your first 30 days (Section 05). Everything in Foundation, live.</div>
         <ul><li>Service + location landing pages</li><li>GBP + tracking + booking flow</li><li>Outreach + automation setup</li></ul>
       </div>
       <div class="pc feat"><div class="lbl">Monthly · after build</div><div class="amt">$4,000<small>/mo</small></div><div class="desc">Run &amp; optimize — the engine working every week.</div>
         <ul><li>Inbound + outbound lead gen</li><li>Content, local SEO, AI-visibility</li><li>Automation, paid, weekly reporting</li></ul>
       </div>
     </div>
-    <div class="kicker"><b>Performance option:</b> prefer a leaner base? <b>$3,500/mo + a bonus per booked walkthrough</b> (or per contract closed). You pay more only when I put revenue on the board — fully aligned with your KPIs. &nbsp; <span style="color:var(--ink-4)">Ad spend is separate from this fee. 50% deposit holds the start.</span></div>
+    <div class="kicker"><b>Performance option:</b> prefer a leaner base? <b>$3,500/mo + a bonus per booked walkthrough</b> (or per contract closed). You pay more only when I put revenue on the board — fully aligned with your KPIs. &nbsp; <span style="color:var(--ink-4)">Software APIs are included in your existing plans (no new cost). Ad spend is separate and stays yours. 50% deposit holds the start.</span></div>
   </section>
 
-  <section>
-    <div class="sec-eye">05 · Next step</div>
+  <section id="work">
+    <div class="sec-eye">08 · How we work together</div>
+    <h2 class="st">Senior operator, clear cadence, full transparency.</h2>
+    <ul class="clist">
+      <li><b>One point of contact — me.</b> You're not handed to a junior account manager. Direct line, senior judgment on every decision.</li>
+      <li><b>Weekly reporting.</b> A short, plain report every week: leads, booked walkthroughs, pipeline, what I changed and why.</li>
+      <li><b>Monthly strategy review.</b> Zoom out, look at the numbers, set the next month's priorities together.</li>
+      <li><b>A live dashboard.</b> Your KPIs, always on — you never have to ask "is it working?"</li>
+      <li><b>I work inside your tools.</b> Everything is built in your GoHighLevel, Zoho, and Google accounts — so it's yours, visible, and never hostage.</li>
+    </ul>
+  </section>
+
+  <section id="protect">
+    <div class="sec-eye">09 · Your protection</div>
+    <h2 class="st">De-risked, from day one.</h2>
+    <div class="shield"><ul>
+      <li><b>Cure-First guarantee.</b> If something isn't working, I get a 30-day window to fix it. If it's still not right, either side can walk — no penalty.</li>
+      <li><b>Month-to-month after the build.</b> No long lock-in contract. I earn the retainer every month.</li>
+      <li><b>You own everything.</b> Accounts, pages, data, automations, and content stay yours — built in your tools, not mine.</li>
+      <li><b>Ad spend is yours, never marked up.</b> My fee is my fee; your ad budget goes straight to the platforms.</li>
+      <li><b>Full transparency.</b> Live dashboard + weekly reports mean no black box, ever.</li>
+    </ul></div>
+  </section>
+
+  <section id="next">
+    <div class="sec-eye">10 · Next steps</div>
     <h2 class="st">Start the build this week.</h2>
-    <p class="sub">On approval: 50% deposit holds the start, quick kickoff to confirm priorities, and the foundation goes live inside the first weeks — well before you'd have finished interviewing candidates for the role.</p>
+    <ul class="clist">
+      <li><b>Today</b> — align on your 90-day goal, priority services, and scope.</li>
+      <li><b>This week</b> — agreement + 50% deposit, and you grant the week-1 access from Section 06.</li>
+      <li><b>Days 1–30</b> — the Growth Engine Build (Section 05). Foundation goes live fast.</li>
+      <li><b>Day 30</b> — first review; the engine is running and we move into the monthly run.</li>
+    </ul>
+    <p class="sub" style="margin-top:14px">The foundation goes live well before you'd have finished interviewing candidates for the role. Let's get your first commercial walkthrough booked.</p>
   </section>
 
   <div class="foot">
     FLEIRE CASTRO · FRACTIONAL HEAD OF GROWTH · fleire@thirdteam.org · thirdteam.org<br>
-    PREPARED FOR CLEAN ERA (DEBRAND MEDIA INC.) · MISSISSAUGA / GTA · JULY 2026 · DRAFT FOR DISCUSSION
+    PREPARED FOR CLEAN ERA (DEBRAND MEDIA INC.) · MISSISSAUGA / GTA · JULY 2026
   </div>
 
 </div>
