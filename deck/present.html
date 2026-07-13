@@ -178,6 +178,16 @@
   .gseg{position:absolute;top:3px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:13px}
   .gseg.s0{background:#eef1f5;color:#5a6b7d} .gseg.s2{background:#dcecf8;color:var(--navy)} .gseg.s3{background:#bfe0f4;color:var(--navy)} .gseg.s4{background:var(--blue);color:#fff}
 
+
+  .slide::after{content:"CONFIDENTIAL · FLEIRE CASTRO / THIRD TEAM VENTURES · PREPARED FOR CLEAN ERA — DO NOT DISTRIBUTE OR REPRODUCE";
+    position:absolute;bottom:16px;left:0;right:0;text-align:center;font-family:'Space Mono',monospace;
+    font-size:9px;letter-spacing:.14em;color:rgba(120,140,165,.7);z-index:40;pointer-events:none}
+  .slide.cover::after,.slide.close::after{color:rgba(190,208,228,.7)}
+  .wm{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.05;
+    display:flex;align-items:center;justify-content:center}
+  .wm span{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:150px;color:#359BD3;
+    transform:rotate(-24deg);white-space:nowrap;letter-spacing:.04em}
+
   @media print{
     @page{size:1280px 720px;margin:0}
     body{background:#fff}
@@ -200,9 +210,7 @@
   .slide.active{display:flex !important}
   .pbar{position:fixed;z-index:50;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;font-family:'Space Mono',monospace;font-size:12px;color:#8fa2b8;background:rgba(5,8,13,.6);border:1px solid #1c2836;border-radius:999px;padding:7px 16px;backdrop-filter:blur(6px);opacity:.5;transition:opacity .2s}
   .pbar:hover{opacity:1} .pbar b{color:#cfe0f0} .pbar .btn{cursor:pointer;color:#5BB4E5} .pbar .dot{color:#33475c}
-  .phint{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:11px;color:#5a6b7d;opacity:0;transition:opacity .3s;pointer-events:none}
-  body.showhint .phint{opacity:.7}
-  @media print{html,body{overflow:visible}.deck{position:static;transform:none;width:auto;height:auto}.slide{display:flex !important;position:relative;page-break-after:always}.pbar,.phint{display:none}}
+  @media print{html,body{overflow:visible}.deck{position:static;transform:none;width:auto;height:auto}.slide{display:flex !important;position:relative;page-break-after:always}.pbar{display:none}}
 
 </style>
 </head>
@@ -210,19 +218,19 @@
 <div class="deck">
 
   <!-- 1 COVER -->
-  <section class="slide cover active">
+  <section class="slide cover active"><div class="wm"><span>CONFIDENTIAL</span></div>
     <div class="bg"></div>
     <div class="inner">
       <img class="logo" src="cleanera-logo.png" alt="Clean Era">
       <div class="tagpill">Growth Engine Proposal</div>
       <h1>Your commercial client engine — <em>built and run for you.</em></h1>
-      <p class="sub">A builder, not just a manager. One operator + AI systems, connected to the tools you already own. Live in days, not quarters.</p>
-      <div class="by">Prepared for <b>Clean Era</b> (Debrand Media) &nbsp;·&nbsp; by <b>Fleire Castro</b>, Fractional Head of Growth</div>
+      <p class="sub">A builder, not just a manager. One operator + AI systems, connected to the tools you already own. Foundation live in days; full engine built in phases.</p>
+      <div class="by">CONFIDENTIAL — prepared exclusively for <b>Clean Era</b> (Debrand Media) &nbsp;·&nbsp; by <b>Fleire Castro</b>, Fractional Head of Growth</div>
     </div>
   </section>
 
   <!-- 2 DIAGNOSIS -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">02 / 14</span>
     <div class="kick">The diagnosis</div>
     <h2>Four leaks are <span class="b">costing you commercial leads</span> right now.</h2>
@@ -230,12 +238,12 @@
       <div class="gapc"><div class="n">GAP 01</div><h3>No service or location pages</h3><p>Searches for "office cleaning Mississauga" hit a generic homepage. Lost traffic, lost ad conversion.</p><div class="fix">→ Dedicated pages per service × city</div></div>
       <div class="gapc"><div class="n">GAP 02</div><h3>Invisible in AI search</h3><p>Buyers ask ChatGPT "who's a reliable GTA cleaner?" — you're not named. Competitors win first.</p><div class="fix">→ AI-search visibility (AEO/GEO)</div></div>
       <div class="gapc"><div class="n">GAP 03</div><h3>Owned tools not running</h3><p>You pay for GoHighLevel, Zoho &amp; Lemlist — but no live outbound, no speed-to-lead. Driving it by hand.</p><div class="fix">→ Wire your stack into a live engine</div></div>
-      <div class="gapc"><div class="n">GAP 04</div><h3>Trust not doing sales work</h3><p>Photo-verified reports &amp; guarantees are buried, not packaged. Trust unseen doesn't convert.</p><div class="fix">→ A Facility-Manager Proof Pack</div></div>
+      <div class="gapc"><div class="n">GAP 04</div><h3>Trust not doing sales work</h3><p>Photo-verified reports &amp; guarantees are buried, not packaged. Trust unseen doesn't convert.</p><div class="fix">→ A Facility Proof Pack</div></div>
     </div>
   </section>
 
   <!-- 3 THE GOAL -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">03 / 14</span>
     <div class="split">
       <div>
@@ -252,7 +260,7 @@
   </section>
 
   <!-- 4 WHY ME -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">04 / 14</span>
     <div class="split rev">
       <div class="hero-img"><img src="cleaning.jpg" alt="Professional commercial cleaning"></div>
@@ -270,7 +278,7 @@
   </section>
 
   <!-- 5 PROOF: REAL WORK -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">05 / 14</span>
     <div class="kick">Proof · real, live work</div>
     <h2>Businesses I've built &amp; grown — <span class="b">all live, all checkable.</span></h2>
@@ -286,7 +294,7 @@
 
 
   <!-- 5b PROOF: KPI WINS -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">06 / 14</span>
     <div class="kick">Proof · the numbers</div>
     <h2>KPI wins I've put on the board — <span class="b">across those businesses.</span></h2>
@@ -294,17 +302,17 @@
       <div class="kpi"><div class="n">$139K</div><div class="l">Y1 ARR built for a platform I founded</div></div>
       <div class="kpi"><div class="n">$84K<span style="font-size:20px">/yr</span></div><div class="l">single enterprise account landed &amp; signed</div></div>
       <div class="kpi"><div class="n">130+</div><div class="l">automations built · ~90 running in production</div></div>
-      <div class="kpi"><div class="n">1 → 30</div><div class="l">one operator delivering a 30-person team's output</div></div>
-      <div class="kpi"><div class="n">63.6%</div><div class="l">of a client's paid demand I found lost to ad-rank — not budget. Reset their strategy.</div></div>
+      <div class="kpi"><div class="n">1 + AI</div><div class="l">the output of a full marketing team, from one operator</div></div>
+      <div class="kpi"><div class="n">63.6%</div><div class="l">of a client's eligible ad impressions I found lost to ad-rank (not budget) — reset their strategy</div></div>
       <div class="kpi"><div class="n">~$2.4K<span style="font-size:20px">/mo</span></div><div class="l">attributed revenue surfaced from broken tracking</div></div>
       <div class="kpi"><div class="n">3–5<span style="font-size:20px"> days</span></div><div class="l">to launch a new local-service site + visibility engine</div></div>
-      <div class="kpi"><div class="n">20 yrs</div><div class="l">Top 40 Under 40 · Stevie Award · U.S. State Dept Fellow</div></div>
+      <div class="kpi"><div class="n">18 yrs</div><div class="l">Top 40 Under 40 · Stevie Award · U.S. State Dept Fellow</div></div>
     </div>
     <div class="foot" style="margin-top:12px">Clients anonymized · every figure is from real, delivered work.</div>
   </section>
 
   <!-- 6 PROOF: AUTOMATIONS -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">07 / 14</span>
     <div class="kick">Proof · the automation fleet</div>
     <h2>130+ automations I've built &amp; run — <span class="b">these are the real machines.</span></h2>
@@ -317,32 +325,32 @@
   </section>
 
   <!-- 7 THE BUILD -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">08 / 14</span>
     <div class="kick">The 90-day build</div>
     <h2>The engine — <span class="b">built in the right order.</span></h2>
     <div class="phases">
-      <div class="phc"><div class="ph">WEEKS 1–4 · FOUNDATION</div><h3>The base</h3><ul><li>Service + location landing pages</li><li>Google Business Profile + tracking</li><li>Booking + "Free Deep Clean" in GoHighLevel</li></ul><div class="out">▸ A findable presence that converts</div></div>
-      <div class="phc"><div class="ph">WEEKS 3–7 · LEADS</div><h3>Inbound + outbound</h3><ul><li>Local SEO + AI-search visibility</li><li>Outbound to facility managers (Lemlist + Zoho)</li><li>Weekly content, produced with AI</li></ul><div class="out">▸ First consistent lead flow</div></div>
-      <div class="phc"><div class="ph">WEEKS 6–12 · SCALE</div><h3>Automate &amp; convert</h3><ul><li>Speed-to-lead automation in GoHighLevel</li><li>Facility-Manager Proof Pack</li><li>Controlled paid + KPI dashboard</li></ul><div class="out">▸ A predictable booking machine</div></div>
+      <div class="phc"><div class="ph">WEEKS 1–4 · FOUNDATION</div><h3>The base</h3><ul><li>Service + location landing pages</li><li>Google Business Profile + tracking</li><li>Google Local Ads + call-capture (GoHighLevel)</li><li>Booking + "Free Deep Clean" offer</li></ul><div class="out">▸ A findable presence that converts</div></div>
+      <div class="phc"><div class="ph">MONTHS 2–3 · GROW</div><h3>Inbound + outbound</h3><ul><li>Local SEO + AI-search visibility</li><li>Outbound to healthcare facilities (Lemlist + Zoho)</li><li>Weekly content, produced with AI</li></ul><div class="out">▸ First consistent lead flow</div></div>
+      <div class="phc"><div class="ph">MONTHS 4–6 · SCALE</div><h3>Automate &amp; convert</h3><ul><li>Speed-to-lead automation in GoHighLevel</li><li>Facility Proof Pack</li><li>Controlled paid + KPI dashboard</li></ul><div class="out">▸ A predictable booking machine</div></div>
     </div>
   </section>
 
   <!-- 8 FIRST 30 DAYS -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">09 / 14</span>
     <div class="kick">Your first 30 days</div>
     <h2>Week by week — <span class="b">a live engine, not a deck.</span></h2>
     <div class="weeks">
       <div class="wk"><div class="num">1</div><div class="t">Access &amp; audit</div><p>Connect your tools, verify tracking, full audit, GBP started, brand kit. You get a baseline report.</p></div>
       <div class="wk"><div class="num">2</div><div class="t">Foundation pages</div><p>Priority service + location pages go live, offer + booking wired into GoHighLevel.</p></div>
-      <div class="wk"><div class="num">3</div><div class="t">Convert &amp; reach</div><p>Speed-to-lead automation, Proof Pack, first outbound to facility managers via Lemlist.</p></div>
-      <div class="wk"><div class="num">4</div><div class="t">Visibility &amp; report</div><p>Local SEO + AI-visibility live, first content, KPI dashboard, 30-day review.</p></div>
+      <div class="wk"><div class="num">3</div><div class="t">Ads + call-capture</div><p>Google Local Ads go live + GoHighLevel AI receptionist catches every call. Speed-to-lead automation + Facility Proof Pack wired in.</p></div>
+      <div class="wk"><div class="num">4</div><div class="t">Optimize &amp; report</div><p>Tune ads for cost-per-call, KPI dashboard live, SEO/AEO foundation laid, 30-day review.</p></div>
     </div>
   </section>
 
   <!-- 9 ONBOARDING -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">10 / 14</span>
     <div class="kick">What I need from you</div>
     <h2>Onboarding — <span class="b">the fast-start checklist.</span></h2>
@@ -356,20 +364,20 @@
   </section>
 
   <!-- 10 INVESTMENT -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">11 / 14</span>
     <div class="kick">Investment · bite-size</div>
     <h2>Built in phases — <span class="b">scaled by results.</span></h2>
     <div class="price">
       <div class="prc"><div class="l">Setup · one-time</div><div class="amt">$3,500</div><div class="d">The technical foundation. <b>Paid in 3 small batches as milestones land — first is just $1,000.</b></div></div>
-      <div class="prc feat"><div class="l">Monthly · starts lean, scales</div><div class="amt">from $2,000<small>/mo</small></div><div class="d"><b>Mo 1–2:</b> $2K — Google Ads + call-capture. &nbsp;<b>Mo 3+:</b> toward $4K — outbound, SEO, more channels, as ads prove out.</div></div>
+      <div class="prc feat"><div class="l">Monthly · starts lean, scales</div><div class="amt">from $2,000<small>/mo</small></div><div class="d"><b>Mo 1–2:</b> $2K — Google Ads + call-capture. &nbsp;<b>Mo 3:</b> $3K — outbound + SEO. &nbsp;<b>Mo 4+:</b> $4K — full multi-channel.</div></div>
     </div>
-    <div class="kick-note"><b>Only grows when the numbers do.</b> Separate &amp; yours: ad spend (~$500–800/mo) + tool subs (GoHighLevel/Zoho/Lemlist). &nbsp;vs a $4–6k hire or $6–12k agency.</div>
+    <div class="kick-note"><b>Only grows when the numbers do.</b> Separate &amp; yours: ad spend (~$500–800/mo) + tool subs (GoHighLevel/Zoho/Lemlist). &nbsp;vs a $8–12k all-in hire or $6–12k agency.</div>
   </section>
 
 
   <!-- ROADMAP -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">12 / 14</span>
     <div class="kick">Your roadmap · 6-month plan</div>
     <h2>From quick wins to the <span class="b">full engine.</span></h2>
@@ -392,7 +400,7 @@
   </section>
 
   <!-- 11 HOW WE WORK + PROTECTION -->
-  <section class="slide">
+  <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">13 / 14</span>
     <div class="kick">How we work · your protection</div>
     <h2>Senior operator, clear cadence, <span class="b">fully de-risked.</span></h2>
@@ -405,7 +413,7 @@
         <li><b>Built in your tools</b> — yours, never hostage.</li>
       </div>
       <div class="p"><h3>Your protection</h3>
-        <li><b>Cure-First guarantee</b> — 30-day fix window or walk.</li>
+        <li><b>Cure-First guarantee</b> — a 30-day window to hit the agreed target (e.g. cost-per-call), or walk.</li>
         <li><b>Month-to-month</b> after the build. No lock-in.</li>
         <li><b>You own everything</b> — accounts, pages, data.</li>
         <li><b>Ad spend never marked up.</b></li>
@@ -415,14 +423,14 @@
   </section>
 
   <!-- 12 CLOSE -->
-  <section class="slide close">
+  <section class="slide close"><div class="wm"><span>CONFIDENTIAL</span></div>
     <div class="bg"></div>
     <div class="inner">
       <div class="kick" style="color:var(--blue-l)">Next steps</div>
-      <h1>Let's get your first commercial walkthrough <em style="color:var(--blue-l);font-style:normal">booked.</em></h1>
+      <h1>Let's get your first commercial jobs <em style="color:var(--blue-l);font-style:normal">booked.</em></h1>
       <div class="steps">
         <div class="st"><div class="w">TODAY</div><div class="x">Align on goal &amp; scope</div></div>
-        <div class="st"><div class="w">THIS WEEK</div><div class="x">Agreement + deposit + access</div></div>
+        <div class="st"><div class="w">THIS WEEK</div><div class="x">Agreement + first batch + access</div></div>
         <div class="st"><div class="w">DAYS 1–30</div><div class="x">The build — foundation live</div></div>
         <div class="st"><div class="w">DAY 30</div><div class="x">Review → monthly run</div></div>
       </div>
@@ -432,7 +440,6 @@
 
 </div>
 
-<div class="phint">← → or click to advance · press F for fullscreen</div>
 <div class="pbar"><span class="btn" onclick="go(-1)">‹ prev</span><span class="dot">·</span><span><b id="pcur">1</b> / <span id="ptot">1</span></span><span class="dot">·</span><span class="btn" onclick="go(1)">next ›</span><span class="dot">·</span><span class="btn" onclick="fs()">⛶ full</span></div>
 <script>
 var slides=[].slice.call(document.querySelectorAll('.slide'));var i=0;document.getElementById('ptot').textContent=slides.length;
@@ -442,7 +449,6 @@ function go(d){show(i+d)} function fs(){if(!document.fullscreenElement){document
 addEventListener('resize',fit);fit();show(0);
 addEventListener('keydown',function(e){if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].indexOf(e.key)>-1){go(1);e.preventDefault()}else if(['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key)>-1){go(-1);e.preventDefault()}else if(e.key==='f'||e.key==='F'){fs()}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}});
 addEventListener('click',function(e){if(e.target.closest('.pbar'))return;go(e.clientX<innerWidth*0.28?-1:1)});
-document.body.classList.add('showhint');setTimeout(function(){document.body.classList.remove('showhint')},3500);
 </script>
 
 </body>
