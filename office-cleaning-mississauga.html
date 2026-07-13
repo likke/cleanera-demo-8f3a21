@@ -31,13 +31,12 @@
   .top a{color:#fff;font-weight:600}
   .nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:20}
   .nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
-  .logo{font-family:var(--head);font-weight:800;font-size:22px;color:var(--navy-d);display:flex;align-items:center;gap:9px}
-  .logo .mk{background:var(--blue);color:#fff;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
-  .logo em{color:var(--blue);font-style:normal}
+  .logo img{height:38px;width:auto;display:block}
 
   /* hero */
-  .hero{background:linear-gradient(160deg,var(--navy-d),var(--navy) 70%);color:#fff;padding:60px 0 66px;position:relative;overflow:hidden}
-  .hero:after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(53,155,211,.35),transparent 65%)}
+  .hero{position:relative;color:#fff;padding:60px 0 66px;overflow:hidden;background:var(--navy-d)}
+  .hero .bg{position:absolute;inset:0;background:url('hero.jpg') center/cover no-repeat}
+  .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(7,21,54,.94),rgba(41,78,131,.82) 55%,rgba(41,78,131,.55))}
   .hero .wrap{position:relative;z-index:2}
   .loc{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 15px;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:18px}
   .hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;max-width:16ch}
@@ -58,6 +57,11 @@
   .ocard .d{font-size:14px;color:var(--ink-2);margin-top:3px}
   .offer .note{grid-column:1/-1;text-align:center;font-size:13px;color:var(--muted);margin-top:4px}
 
+  .photoband{position:relative;border-radius:18px;overflow:hidden;margin:34px 0 0;box-shadow:0 14px 34px rgba(7,21,54,.12)}
+  .photoband img{width:100%;height:300px;object-fit:cover;display:block}
+  .photoband .cap{position:absolute;left:0;bottom:0;right:0;padding:26px 30px;background:linear-gradient(0deg,rgba(7,21,54,.85),transparent);color:#fff}
+  .photoband .cap .t{font-family:var(--head);font-weight:800;font-size:22px}
+  .photoband .cap .s{font-size:14px;color:#cfe0f0;margin-top:3px}
   section{padding:56px 0}
   .eyebrow{font-family:var(--head);color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
   h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800}
@@ -121,11 +125,11 @@
 </div></div>
 
 <div class="nav"><div class="wrap">
-  <div class="logo"><span class="mk">CE</span>Clean<em>Era</em></div>
+  <div class="logo"><img src="cleanera-logo.png" alt="Clean Era"></div>
   <a class="btn" href="#quote">Get a Quote &amp; Site Visit</a>
 </div></div>
 
-<div class="hero"><div class="wrap">
+<div class="hero"><div class="bg"></div><div class="wrap">
   <div class="loc">📍 Serving Mississauga &amp; the Greater Toronto Area</div>
   <h1>Commercial Office Cleaning in <em>Mississauga</em></h1>
   <div class="tag">On Time · On Spec · Every Time</div>
@@ -147,6 +151,11 @@
   <div class="ocard"><div class="n">$200 Service Credit</div><div class="d">Applied to your first month</div></div>
   <div class="ocard"><div class="n">No Startup Fees</div><div class="d">Onboarded and cleaning within 7 days</div></div>
   <div class="note">Limited-time offer for the next 10 new GTA clients — "Switch Without the Headache."</div>
+</div></div>
+
+<div class="wrap"><div class="photoband">
+  <img src="action.jpg" alt="Professional commercial floor cleaning in progress">
+  <div class="cap"><div class="t">Trained, supervised, photo-verified crews.</div><div class="s">Commercial-grade equipment and clear standards — every visit documented.</div></div>
 </div></div>
 
 <section><div class="wrap">
