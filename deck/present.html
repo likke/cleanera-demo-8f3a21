@@ -188,6 +188,19 @@
   .wm span{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:150px;color:#359BD3;
     transform:rotate(-24deg);white-space:nowrap;letter-spacing:.04em}
 
+
+  .pladder{display:flex;flex-direction:column;gap:24px;margin-top:22px;flex:1;justify-content:center}
+  .plab{font-family:var(--mono);font-size:12px;color:var(--blue);font-weight:700;letter-spacing:.06em;margin-bottom:12px;text-transform:uppercase}
+  .pcap{color:var(--ink-3);font-weight:400;text-transform:none;letter-spacing:0}
+  .pchips{display:flex;align-items:center;gap:0}
+  .pchip{border:1px solid var(--line);border-radius:12px;padding:13px 18px;background:#fff;text-align:center;min-width:148px}
+  .pchip.first{border:2px solid var(--blue);background:#f0f8fd}
+  .pchip .amt{font-family:var(--head);font-weight:800;font-size:26px;color:var(--navy-d);line-height:1}
+  .pchip .amt small{font-size:13px;color:var(--ink-3);font-weight:600}
+  .pchip .when{font-size:11.5px;color:var(--ink-2);margin-top:5px}
+  .parrow{color:var(--blue);font-size:20px;padding:0 12px;font-weight:700}
+  .ptot{margin-left:16px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
   @media print{
     @page{size:1280px 720px;margin:0}
     body{background:#fff}
@@ -366,11 +379,30 @@
   <!-- 10 INVESTMENT -->
   <section class="slide"><div class="wm"><span>CONFIDENTIAL</span></div>
     <span class="snum">11 / 14</span>
-    <div class="kick">Investment · bite-size</div>
-    <h2>Built in phases — <span class="b">scaled by results.</span></h2>
-    <div class="price">
-      <div class="prc"><div class="l">Setup · one-time</div><div class="amt">$3,500</div><div class="d">The technical foundation. <b>Paid in 3 small batches as milestones land — first is just $1,000.</b></div></div>
-      <div class="prc feat"><div class="l">Monthly · starts lean, scales</div><div class="amt">from $2,000<small>/mo</small></div><div class="d"><b>Mo 1–2:</b> $2K — Google Ads + call-capture. &nbsp;<b>Mo 3:</b> $3K — outbound + SEO. &nbsp;<b>Mo 4+:</b> $4K — full multi-channel.</div></div>
+    <div class="kick">Investment · bite-size, phased</div>
+    <h2>Start small — <span class="b">just $1,000 to begin.</span></h2>
+    <div class="pladder">
+      <div class="prow">
+        <div class="plab">Setup · one-time &nbsp;<span class="pcap">the technical foundation, paid as milestones land</span></div>
+        <div class="pchips">
+          <div class="pchip first"><div class="amt">$1,000</div><div class="when">to start</div></div>
+          <div class="parrow">→</div>
+          <div class="pchip"><div class="amt">$1,250</div><div class="when">at launch</div></div>
+          <div class="parrow">→</div>
+          <div class="pchip"><div class="amt">$1,250</div><div class="when">on completion</div></div>
+          <div class="ptot">= $3,500 total</div>
+        </div>
+      </div>
+      <div class="prow">
+        <div class="plab">Monthly · grows with results &nbsp;<span class="pcap">only steps up as each phase proves out</span></div>
+        <div class="pchips">
+          <div class="pchip"><div class="amt">$2,000<small>/mo</small></div><div class="when">Months 1–2 · ads + call-capture</div></div>
+          <div class="parrow">→</div>
+          <div class="pchip"><div class="amt">$3,000<small>/mo</small></div><div class="when">Month 3 · + outbound &amp; SEO</div></div>
+          <div class="parrow">→</div>
+          <div class="pchip"><div class="amt">$4,000<small>/mo</small></div><div class="when">Month 4+ · full engine</div></div>
+        </div>
+      </div>
     </div>
     <div class="kick-note"><b>Only grows when the numbers do.</b> Separate &amp; yours: ad spend (~$500–800/mo) + tool subs (GoHighLevel/Zoho/Lemlist). &nbsp;vs a $8–12k all-in hire or $6–12k agency.</div>
   </section>
