@@ -160,6 +160,24 @@
   .rd{font-size:11.5px;color:var(--ink-2);margin-top:5px;line-height:1.32;flex:1}
   .rteam{font-size:10px;color:var(--blue);margin-top:8px;font-weight:600}
 
+
+  /* gantt */
+  .gantt{margin-top:20px;flex:1;display:flex;flex-direction:column;font-size:13px}
+  .grow{display:grid;grid-template-columns:250px 1fr;align-items:center;min-height:38px}
+  .gantt .ghead{border-bottom:1.5px solid var(--line);margin-bottom:6px}
+  .ghead .gcells{display:grid;grid-template-columns:repeat(7,1fr)}
+  .ghead .gcells span{text-align:center;font-family:var(--mono);font-size:11px;color:var(--ink-2);padding:6px 0;border-left:1px solid var(--line)}
+  .glbl{font-size:13.5px;color:var(--ink);font-weight:600;padding-right:14px}
+  .glbl small{display:block;color:var(--ink-2);font-weight:400;font-size:11.5px}
+  .gtrack{position:relative;height:30px;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:14.2857% 100%}
+  .gbar{position:absolute;top:5px;height:20px;border-radius:6px;display:flex;align-items:center;padding:0 10px;color:#fff;font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;box-shadow:0 2px 6px rgba(7,21,54,.12)}
+  .gbar.setup{background:#7d8ca0} .gbar.ads{background:var(--blue)} .gbar.out{background:#2f9e8f}
+  .gbar.seo{background:#4a9d5f} .gbar.cmo{background:var(--navy)} .gbar.scale{background:var(--amber)}
+  .gfee{border-top:1.5px solid var(--line);margin-top:6px;padding-top:6px}
+  .gfee .gtrack{height:30px;background:none}
+  .gseg{position:absolute;top:3px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:13px}
+  .gseg.s0{background:#eef1f5;color:#5a6b7d} .gseg.s2{background:#dcecf8;color:var(--navy)} .gseg.s3{background:#bfe0f4;color:var(--navy)} .gseg.s4{background:var(--blue);color:#fff}
+
   @media print{
     @page{size:1280px 720px;margin:0}
     body{background:#fff}
@@ -353,51 +371,24 @@
   <!-- ROADMAP -->
   <section class="slide">
     <span class="snum">12 / 14</span>
-    <div class="kick">Your roadmap</div>
-    <h2>From quick wins to the <span class="b">full engine — phase by phase.</span></h2>
-    <div class="road">
-      <div class="rc">
-        <div class="rm">WEEKS 1–4</div>
-        <div class="barbox"><div class="bar gray" style="height:26px"></div></div>
-        <div class="rfee">Setup · <b>$3,500</b></div>
-        <div class="rt">Build the engine</div>
-        <div class="rd">Tracking · GBP · Google Local Ads live · GoHighLevel + AI receptionist</div>
-        <div class="rteam">🤖 You + AI build agents</div>
-      </div>
-      <div class="rc feat">
-        <div class="rm">MONTHS 1–2</div>
-        <div class="barbox"><div class="bar" style="height:44px"></div></div>
-        <div class="rfee"><b>$2,000</b><small>/mo</small></div>
-        <div class="rt">Ads &amp; cash</div>
-        <div class="rd">Local Ads + call-capture → fast leads that keep the team busy</div>
-        <div class="rteam">🤖 AI receptionist catching calls</div>
-      </div>
-      <div class="rc">
-        <div class="rm">MONTH 3</div>
-        <div class="barbox"><div class="bar" style="height:66px"></div></div>
-        <div class="rfee"><b>$3,000</b><small>/mo</small></div>
-        <div class="rt">Get found</div>
-        <div class="rd">+ Outbound to healthcare (Lemlist/Zoho) + local SEO/AEO pages</div>
-        <div class="rteam">🤖 AI outbound + content agents</div>
-      </div>
-      <div class="rc">
-        <div class="rm">MONTH 4+</div>
-        <div class="barbox"><div class="bar" style="height:88px"></div></div>
-        <div class="rfee"><b>$4,000</b><small>/mo</small></div>
-        <div class="rt">Full engine</div>
-        <div class="rd">+ Fractional-CMO layer + socials + retargeting + more campaigns</div>
-        <div class="rteam">👤 Fractional CMO + 🤖 full fleet</div>
-      </div>
-      <div class="rc">
-        <div class="rm">MONTH 6+</div>
-        <div class="barbox"><div class="bar" style="height:100px"></div></div>
-        <div class="rfee">Scale</div>
-        <div class="rt">Expand</div>
-        <div class="rd">Scale ad spend as ROI proves · AI-ops across the business</div>
-        <div class="rteam">🤖 AI-ops across the company</div>
-      </div>
+    <div class="kick">Your roadmap · 6-month plan</div>
+    <h2>From quick wins to the <span class="b">full engine.</span></h2>
+    <div class="gantt">
+      <div class="ghead"><div class="grow"><div class="glbl">Workstream</div><div class="gcells"><span>Setup</span><span>Mo 1</span><span>Mo 2</span><span>Mo 3</span><span>Mo 4</span><span>Mo 5</span><span>Mo 6</span></div></div></div>
+      <div class="grow"><div class="glbl">Foundation build<small>tracking · GBP · pages · ads setup</small></div><div class="gtrack"><div class="gbar setup" style="left:0;width:14.28%">Setup</div></div></div>
+      <div class="grow"><div class="glbl">Google Local Ads + call-capture<small>GoHighLevel AI receptionist</small></div><div class="gtrack"><div class="gbar ads" style="left:14.28%;width:85.7%">Running — quick-win leads</div></div></div>
+      <div class="grow"><div class="glbl">Outbound — healthcare<small>Lemlist + Zoho</small></div><div class="gtrack"><div class="gbar out" style="left:42.86%;width:57.14%">Targeted outreach</div></div></div>
+      <div class="grow"><div class="glbl">Local SEO / AEO<small>service + location pages, content</small></div><div class="gtrack"><div class="gbar seo" style="left:42.86%;width:57.14%">Get found on Google + AI</div></div></div>
+      <div class="grow"><div class="glbl">Fractional-CMO + socials<small>+ retargeting, full multi-channel</small></div><div class="gtrack"><div class="gbar cmo" style="left:57.14%;width:42.86%">Full engine</div></div></div>
+      <div class="grow"><div class="glbl">Scale &amp; optimize</div><div class="gtrack"><div class="gbar scale" style="left:85.7%;width:14.28%">Scale</div></div></div>
+      <div class="gfee"><div class="grow"><div class="glbl" style="font-family:var(--mono);font-size:11px;color:var(--blue)">YOUR INVESTMENT</div><div class="gtrack">
+        <div class="gseg s0" style="left:0;width:14.28%">$3,500 · 3 batches</div>
+        <div class="gseg s2" style="left:14.28%;width:28.57%">$2,000/mo</div>
+        <div class="gseg s3" style="left:42.86%;width:14.28%">$3,000/mo</div>
+        <div class="gseg s4" style="left:57.14%;width:42.86%">$4,000/mo</div>
+      </div></div></div>
     </div>
-    <div class="kick-note"><b>You start small and step up only as each phase proves out</b> — full multi-channel engine, and your full $4K, by Month 4.</div>
+    <div class="kick-note"><b>Small start, stepped by results</b> — setup in 3 easy batches, monthly grows only as each phase proves out. Full engine &amp; your full $4K by Month 4.</div>
   </section>
 
   <!-- 11 HOW WE WORK + PROTECTION -->

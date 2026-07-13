@@ -116,6 +116,23 @@
   .proof .p{border:1px solid var(--rule-2);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--ink-2)}
   .proof .p b{color:var(--navy)}
   .foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-4);line-height:1.9}
+
+  /* gantt */
+  .gantt{margin-top:18px;font-size:13px}
+  .grow{display:grid;grid-template-columns:220px 1fr;align-items:center;min-height:34px}
+  .ghead{border-bottom:1.5px solid var(--rule);margin-bottom:5px}
+  .ghead .gcells{display:grid;grid-template-columns:repeat(7,1fr)}
+  .ghead .gcells span{text-align:center;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);padding:5px 0;border-left:1px solid var(--rule)}
+  .glbl{font-size:13px;color:var(--ink);font-weight:600;padding-right:12px}
+  .glbl small{display:block;color:var(--ink-3);font-weight:400;font-size:11px}
+  .gtrack{position:relative;height:28px;background-image:linear-gradient(to right,var(--rule) 1px,transparent 1px);background-size:14.2857% 100%}
+  .gbar{position:absolute;top:4px;height:19px;border-radius:5px;display:flex;align-items:center;padding:0 9px;color:#fff;font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden}
+  .gbar.setup{background:#7d8ca0}.gbar.ads{background:var(--blue)}.gbar.out{background:#2f9e8f}.gbar.seo{background:#4a9d5f}.gbar.cmo{background:var(--navy)}.gbar.scale{background:var(--amber)}
+  .gfee{border-top:1.5px solid var(--rule);margin-top:5px;padding-top:5px}
+  .gfee .gtrack{background:none;height:28px}
+  .gseg{position:absolute;top:3px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12.5px}
+  .gseg.s0{background:#eef1f5;color:#5a6b7d}.gseg.s2{background:#dcecf8;color:var(--navy)}.gseg.s3{background:#bfe0f4;color:var(--navy)}.gseg.s4{background:var(--blue);color:#fff}
+
   @media print{@page{size:letter;margin:.5in}section,.pc,.phase,.gap,.obcard,.tl{break-inside:avoid}}
   @media(max-width:720px){.why,.pricing,.obgrid{grid-template-columns:1fr}.phase,.tl{grid-template-columns:1fr}}
 </style>
@@ -288,12 +305,20 @@
     <div class="sec-eye">07b · Your roadmap</div>
     <h2 class="st">From quick wins to the full engine — phase by phase.</h2>
     <p class="sub">You start small and step up only as each phase proves out. Full multi-channel engine — and the full $4K/mo — by Month 4.</p>
-    <div class="timeline" style="margin-top:18px">
-      <div class="tl"><div class="w">Weeks 1–4<br><span style="color:var(--ink-4);font-weight:400">$3,500 setup</span></div><div class="b"><b>Build the engine.</b> Tracking, Google Business Profile, Google Local Ads live, GoHighLevel + AI receptionist. <span style="color:var(--blue)">Team: you + AI build agents.</span></div></div>
-      <div class="tl"><div class="w">Months 1–2<br><span style="color:var(--ink-4);font-weight:400">$2,000/mo</span></div><div class="b"><b>Ads &amp; cash.</b> Google Local Ads + call-capture → fast leads that keep the team busy. <span style="color:var(--blue)">Team: AI receptionist catching every call.</span></div></div>
-      <div class="tl"><div class="w">Month 3<br><span style="color:var(--ink-4);font-weight:400">$3,000/mo</span></div><div class="b"><b>Get found.</b> Add outbound to healthcare facilities (Lemlist/Zoho) + local SEO/AEO pages &amp; content. <span style="color:var(--blue)">Team: AI outbound + content agents.</span></div></div>
-      <div class="tl"><div class="w">Month 4+<br><span style="color:var(--blue);font-weight:700">$4,000/mo</span></div><div class="b"><b>Full engine.</b> Add the fractional-CMO strategy layer + socials + retargeting + more campaigns = full multi-channel. <span style="color:var(--blue)">Team: fractional CMO + full AI fleet.</span></div></div>
-      <div class="tl"><div class="w">Month 6+<br><span style="color:var(--ink-4);font-weight:400">scale</span></div><div class="b"><b>Expand.</b> Scale ad spend as ROI proves · AI-ops automations across the business.</div></div>
+    <div class="gantt">
+      <div class="ghead"><div class="grow"><div class="glbl">Workstream</div><div class="gcells"><span>Setup</span><span>Mo 1</span><span>Mo 2</span><span>Mo 3</span><span>Mo 4</span><span>Mo 5</span><span>Mo 6</span></div></div></div>
+      <div class="grow"><div class="glbl">Foundation build<small>tracking · GBP · pages · ads setup</small></div><div class="gtrack"><div class="gbar setup" style="left:0;width:14.28%">Setup</div></div></div>
+      <div class="grow"><div class="glbl">Google Local Ads + call-capture<small>GoHighLevel AI receptionist</small></div><div class="gtrack"><div class="gbar ads" style="left:14.28%;width:85.7%">Running — quick-win leads</div></div></div>
+      <div class="grow"><div class="glbl">Outbound — healthcare<small>Lemlist + Zoho</small></div><div class="gtrack"><div class="gbar out" style="left:42.86%;width:57.14%">Targeted outreach</div></div></div>
+      <div class="grow"><div class="glbl">Local SEO / AEO<small>service + location pages</small></div><div class="gtrack"><div class="gbar seo" style="left:42.86%;width:57.14%">Get found on Google + AI</div></div></div>
+      <div class="grow"><div class="glbl">Fractional-CMO + socials<small>+ retargeting, full multi-channel</small></div><div class="gtrack"><div class="gbar cmo" style="left:57.14%;width:42.86%">Full engine</div></div></div>
+      <div class="grow"><div class="glbl">Scale &amp; optimize</div><div class="gtrack"><div class="gbar scale" style="left:85.7%;width:14.28%">Scale</div></div></div>
+      <div class="gfee"><div class="grow"><div class="glbl" style="font-family:var(--mono);font-size:10.5px;color:var(--blue)">YOUR INVESTMENT</div><div class="gtrack">
+        <div class="gseg s0" style="left:0;width:14.28%">$3,500 · 3 batches</div>
+        <div class="gseg s2" style="left:14.28%;width:28.57%">$2,000/mo</div>
+        <div class="gseg s3" style="left:42.86%;width:14.28%">$3,000/mo</div>
+        <div class="gseg s4" style="left:57.14%;width:42.86%">$4,000/mo</div>
+      </div></div></div>
     </div>
   </section>
 
